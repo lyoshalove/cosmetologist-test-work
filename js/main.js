@@ -1,11 +1,12 @@
 window.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body"),
         windowWidth = window.outerWidth,
-        burger = document.querySelector('.burger'),
-        hero = document.querySelector('.hero'),
-        catalogCards = document.querySelectorAll('.catalog__card'),
-        galleryBtn = document.querySelector('.gallery__btn'),
-        modalAbout = document.querySelector('.modal__about-wrapper');
+        burger = document.querySelector(".burger"),
+        hero = document.querySelector(".hero"),
+        catalogCards = document.querySelectorAll(".catalog__card"),
+        galleryBtn = document.querySelector(".gallery__btn"),
+        modalAbout = document.querySelector(".modal__about-wrapper"),
+        anchors = document.querySelectorAll('a[href*="#"]');
 
   function removeBodyClass() {
     setTimeout(() => {
@@ -15,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
   removeBodyClass();
 
   //Burger
-  burger.addEventListener('click', () => {
+  burger.addEventListener('click', (e) => {
     burger.classList.toggle('active');
     hero.classList.toggle('active');
     body.classList.toggle('lock');
@@ -85,6 +86,26 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   modal(modalAbout, ".about__btn", ".modal__about-cross img");
+
+  //Smooth Scroll
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const blockID = anchor.getAttribute("href").substr(1);
+
+      if (e.target.className === "burger__menu-link") {
+        burger.classList.remove("active");
+        hero.classList.remove("active");
+        body.classList.remove("lock");
+      }
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
 
   //hero-slider
   const heroSlider = new Swiper(".hero__slider", {
