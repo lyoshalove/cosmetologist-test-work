@@ -30,10 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     if(targetClass.indexOf(key) !== -1) {
       console.log(e.currentTarget);
-      if (
-        target.classList.contains("catalog__card-descr") ||
-        target.classList.contains("catalog__card-link")
-      ) {
+      if (target.classList.contains("catalog__card-descr") || target.classList.contains("catalog__card-link")) {
         return;
       }
       removeClasses(catalogCards);
@@ -106,6 +103,35 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  //Form Validations
+  const validation = new JustValidate("#bottom__form", {
+    errorFieldCssClass: "invalid",
+    errorLabelStyle: {
+      color: "white",
+    },
+  });
+
+  validation
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "This filed is required",
+      },
+    ])
+    .addField("#phone", [
+      {
+        rule: "maxLength",
+        value: 11,
+      },
+      {
+        rule: "required",
+        errorMessage: "This filed is required",
+      },
+      {
+        rule: 'number'
+      }
+    ]);
 
   //hero-slider
   const heroSlider = new Swiper(".hero__slider", {

@@ -11,7 +11,7 @@
   <body class="lock">
     <div class="wrapper">
 
-       <div class="preloader">
+       <!-- <div class="preloader">
         <svg
           width="185"
           height="98"
@@ -157,7 +157,7 @@
             ></path>
           </g>
         </svg>
-      </div> 
+      </div>  -->
 
       <main>
         <div class="hero">
@@ -226,8 +226,8 @@
           <div class="swiper hero__slider">
             <div class="swiper-wrapper hero__slider-wrapper">
               <div class="swiper-slide hero__slider-item" style="background-image: url(img/slider/slider-img-1.jpg);"></div>
-              <div class="swiper-slide hero__slider-item" style="background-image: url(https://images.unsplash.com/photo-1560322259-830777d84394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80);"></div>
-              <div class="swiper-slide hero__slider-item" style="background-image: url(https://images.unsplash.com/photo-1464961968964-a80a9b51f3d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);"></div>
+              <div class="swiper-slide hero__slider-item" style="background-image: url(https://images.unsplash.com/photo-1591961310354-91ca99664c65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);"></div>
+              <div class="swiper-slide hero__slider-item" style="background-image: url(img/slider/slider-three.jpeg);"></div>
             </div>
           </div>
           <div class="hero__slider-btns">
@@ -532,16 +532,16 @@
           <div class="container bottom__container">
             <div class="bottom__form-wrapper">
               <h2 class="bottom__form-title center">CONTACT BETH</h2>
-              <form action="" method="POST" class="bottom__form">
+              <form action="php/mail.php" method="POST" class="bottom__form" id="bottom__form">
                 <div class="bottom__form-item">
                   <label>
-                    <input class="bottom__form-input" type="text">
+                    <input class="bottom__form-input" type="text" name="name" id="name">
                     <span data-placeholder="Your Name">Your Name</span>
                   </label>
                 </div>
                 <div class="bottom__form-item">
                   <label>
-                    <input class="bottom__form-input" type="phone">
+                    <input class="bottom__form-input" type="phone" name="phone" id="phone">
                     <span data-placeholder="Your Phone">Your Phone</span>
                   </label>
                 </div>
@@ -676,6 +676,7 @@
     </div>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/libs/just-validate.production.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

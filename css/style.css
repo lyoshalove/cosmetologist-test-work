@@ -557,6 +557,30 @@ h4, .h4 {
   font-size: 24px;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #536073;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: #E2EAF0;
+}
+
+.just-validate-error-label {
+  display: inline-block;
+  background: red;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
 .preloader {
   background: #000;
   display: flex;
