@@ -1011,6 +1011,10 @@ h4, .h4 {
   transform: translate(0, 10px);
 }
 
+.catalog__card-link-showed {
+  display: none;
+}
+
 .catalog__card-title {
   color: #fff;
   margin: 0 0 10px;
@@ -1715,6 +1719,13 @@ h4, .h4 {
   .catalog__card-item {
     transition: .3s;
     transform: translate(15px, 0) scale(0);
+  }
+  .catalog__card-descr, .catalog__card-link {
+    display: none;
+  }
+  .catalog__card-descr-showed, .catalog__card-link-showed {
+    display: block;
+    font-size: 22px;
   }
   .about__description {
     display: none;
