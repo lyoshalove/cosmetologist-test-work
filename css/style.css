@@ -1269,6 +1269,24 @@ h4, .h4 {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  position: relative;
+  z-index: 1;
+}
+
+.bottom__form-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: #9DB8CE;
+  transition: .3s;
+  z-index: -1;
+}
+
+.bottom__form-btn:hover::before {
+  height: 100%;
 }
 
 .footer__content {
