@@ -157,7 +157,6 @@ window.addEventListener("DOMContentLoaded", () => {
   //testimonials-slider
   const testimonialsSlider = new Swiper(".testimonials__slider", {
     direction: "horizontal",
-    loop: true,
     grabCursor: true,
     keyboard: true,
     navigation: {
