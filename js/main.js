@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
         modalAbout = document.querySelector(".modal__about-wrapper"),
         anchors = document.querySelectorAll('a[href*="#"]');
 
+  //Preloader
   function removeBodyClass() {
     setTimeout(() => {
       body.classList.remove("lock");
@@ -29,7 +30,6 @@ window.addEventListener("DOMContentLoaded", () => {
           key = 'catalog__card';
     
     if(targetClass.indexOf(key) !== -1) {
-      console.log(e.currentTarget);
       if (target.classList.contains("catalog__card-descr") || target.classList.contains("catalog__card-link")) {
         return;
       }
@@ -173,8 +173,4 @@ window.addEventListener("DOMContentLoaded", () => {
   if(windowWidth <= 992) {
     testimonialsSlider.destroy();
   }
-
-  window.addEventListener("click", (e) => {
-    console.log(e.target);
-  });
 });
