@@ -1385,6 +1385,7 @@ h4, .h4 {
   height: 2px;
   background: #536073;
   opacity: 1;
+  border-radius: 0;
 }
 
 .swiper-pagination-bullet:not(:last-child) {
@@ -1499,6 +1500,7 @@ h4, .h4 {
   }
   .hero {
     min-height: 100vh;
+    overflow-y: auto;
   }
   .hero__content {
     margin: 0 auto;
