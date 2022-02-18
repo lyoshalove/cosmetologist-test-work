@@ -1,0 +1,135 @@
+$darkBlue: #536073
+$gray: #757575
+$darkGray: #626262
+$blue: #9DB8CE
+$white: #fff
+$black: #000
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+
+body
+  font-family: 'Roboto', sans-serif
+  color: $white
+  font-size: 15px
+  line-height: 1.2
+  font-weight: 400
+  font-style: normal
+  &.lock
+    overflow: hidden
+
+img
+  max-width: 100%
+  display: block
+
+svg
+  display: block
+
+a
+  text-decoration: none
+  display: inline-block
+  color: inherit
+  font-size: inherit
+
+ul, li
+  list-style: none
+
+textarea
+  resize: none
+
+input,
+textarea,
+button
+  font-family: inherit
+  font-size: inherit
+  border: none
+  background: none
+
+svg
+  display: block
+
+button
+  cursor: pointer
+
+.container
+  max-width: 1590px
+  padding: 0 20px
+  margin: 0 auto
+
+.btn
+  font-family: 'Arial', sans-serif
+  background: $darkBlue
+  text-transform: uppercase
+  padding: 23px 49px
+  text-align: center
+  transition: .3s
+  &:hover
+    background: #3F4B5C
+  &:active
+    background: #313945
+
+.btn-transparent
+  font-family: 'Arial', sans-serif
+  color: $darkBlue
+  letter-spacing: 0.15em
+  text-transform: uppercase
+  text-align: center
+  background: transparent
+  padding: 23px 50px
+  border: 2px solid $darkBlue
+  transition: .3s
+  &:hover
+    background: #E2EAF0
+  &:active
+    color: $white
+    background: #536073
+
+.center
+  text-align: center
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  font-family: 'Trajan Pro 3', serif
+  line-height: 1.35
+  text-transform: uppercase
+  font-weight: 400
+  color: $darkBlue
+
+h1, .h1
+  font-size: 76px
+
+h2, .h2
+  font-size: 60px
+
+h3, .h3
+  font-size: 40px
+
+h4, .h4
+  font-size: 24px
+
+h5, .h5
+
+h6, .h6
+
+::-webkit-scrollbar
+  width: 2px
+
+::-webkit-scrollbar-button
+  display: none
+
+::-webkit-scrollbar-thumb
+  background: $darkBlue
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece
+  background: #E2EAF0
+
+.just-validate-error-label
+  display: inline-block
+  background: red
+  padding: 3px 10px
+  font-size: 12px

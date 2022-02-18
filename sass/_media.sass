@@ -1,0 +1,383 @@
+@media (max-width: 1600px)
+  .hero
+    &__content
+      padding: 200px 0
+  .catalog
+    &__card
+      flex: 0 1 calc(25% - 15px)
+      &:not(:last-child)
+        margin: 0 20px 0 0
+      &::before
+        display: none
+      &-menu
+        margin: 0 0 200px
+  .testimonials
+    &__slider
+      &-prev
+        margin: 0 0 0 20px
+      &-next
+        margin: 0 20px 0 0
+  .gallery
+    &__cards
+      grid-template-columns: repeat(3, 310px)
+      grid-template-rows: repeat(4, 310px)
+
+@media (max-width: 1200px)
+  .header
+    padding: 33px 20px 0
+    &__logo
+      margin: 0 50px 0 0
+    &__menu
+      &-item
+        &:not(:last-child)
+          margin: 0 30px 0 0
+  .hero
+    &__social
+      display: none
+  .catalog
+    &__cards
+      justify-content: center
+    &__card
+      flex: 0 1 calc(40% - 15px)
+      margin: 0 0 30px
+      &:not(:last-child)
+        margin: 0 0 30px
+      &:not(:nth-child(2n))
+        margin: 0 30px 30px 0
+  .about
+    &__info
+      flex: 0 1 calc(50% - 70px)
+      margin: 0 70px 0 0
+    &__image
+      flex: 0 1 50%
+  .testimonials
+    &-item
+      gap: 15px
+  .footer
+    &__content
+      padding: 0 20px
+    &__menu
+      &-item
+        &:not(:last-child)
+          margin: 0 30px 0 0
+
+@media (max-width: 992px)
+  h1
+    font-size: 60px
+
+  .header
+    &__logo
+      svg
+        path
+          fill: $white
+    &__nav
+      display: none
+    &__right
+      display: none
+
+  .burger
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+  .hero
+    min-height: 100vh
+    overflow-y: auto
+    &__content
+      margin: 0 auto
+      min-height: calc(100vh - 92px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+    &__title
+      color: $white
+      margin: 0
+    &__btn
+      color: $white
+      border-color: $white
+    &__background
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: rgba($darkBlue, .5)
+      z-index: -1
+    &__slider
+      &-pagination
+        display: flex
+        justify-content: center
+        margin: 35px 0 105px
+      &-item
+        &:first-child
+          background-position: 70% center
+
+  .face
+    &__info
+      &-text
+        font-size: 32px
+        &::before
+          top: -60px
+          left: -50px
+          width: 180px
+          height: 180px
+
+  .catalog
+    &__card
+      flex: 0 1 calc(50% - 15px)
+
+  .about
+    &__content
+      flex-direction: column
+    &__info
+      flex: 0 1 100%
+      margin: 0
+    &__title
+      text-align: center
+      margin: 0 0 40px
+    &__description
+      text-align: center
+      margin: 0 0 40px
+
+  .testimonials
+    &__slider
+      &-btn
+        display: none
+      &-item
+        grid-template-columns: repeat(1, minmax(280px, 1fr))
+        grid-template-rows: repeat(3, minmax(210px, auto))
+        gap: 20px
+    &-item
+      &__big
+        grid-row: 1/1
+        .testimonials-item__text
+          font-size: 24px
+          margin: 0 0 20px
+      &__big,
+      &__small
+        padding: 20px
+    &__link
+      display: inline-block
+
+  .gallery
+    &__cards
+      grid-template-columns: repeat(2, 300px)
+      grid-template-rows: repeat(5, 300px)
+
+  .footer
+    &__content
+      &-top
+        flex-direction: column
+        align-items: center
+        margin: 0
+      &-bottom
+        align-items: center
+        flex-direction: column
+    &__nav
+      display: none
+    &__contacts
+      text-align: center
+      margin: 35px 0
+    &__bottom
+      &-logo
+        display: block
+        margin: 50px 0 0
+
+  .facebook
+    width: 11px
+    height: 22px
+    &-footer
+      width: 12px
+      height: 24px
+
+  .twitter
+    width: 25px
+    height: 20px
+    &-footer
+      width: 27px
+      height: 23px
+
+  .instagram
+    width: 25px
+    height: 25px
+    &-footer
+      width: 27px
+      height: 27px
+
+@media(max-width: 768px)
+  h2
+    font-size: 46px
+
+  .hero
+    &__content
+      padding: 0 0 25px
+    &__offer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      flex: 1 1 100%
+    &__slider
+      &-btn
+        display: none
+      &-item
+        background-position: 75% center
+      &-pagination
+        margin: 35px 0 0
+
+  .face
+    padding: 80px 0 40px
+    &__content
+      flex-direction: column
+    &__image
+      flex: 0 1 100%
+    &__info
+      flex: 0 1 100%
+      margin: -35px 0 0
+      z-index: 2
+      &-text
+        padding: 30px
+        margin: 0 0 20px
+        &::before
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+
+  .catalog,
+  .about,
+  .testimonials,
+    padding: 40px 0
+
+  .catalog
+    &__cards
+      flex-direction: column
+    &__card
+      z-index: 100
+      flex: 0 1 100%
+      padding: 95px 22px 25px
+      &:first-child
+        background-position: center 10%
+      &:not(:last-child)
+        margin: 0 0 20px
+      &.active
+        padding: 40px 22px 20px
+        .catalog__card
+          &-menu
+            height: auto
+            margin: 0 0 190px
+          &-item
+            transform: translate(0, 0) scale(1)
+      &-menu
+        height: 0
+        margin: 0
+      &-item
+        transition: .3s
+        transform: translate(15px, 0) scale(0)
+      &-descr,
+      &-link
+        display: none
+        &-showed
+          display: block
+          font-size: 22px
+
+  .about
+    &__description
+      display: none
+    &__image
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__btn
+      display: block
+      margin: 20px 0 0
+
+  .testimonials
+    &__title
+      margin: 0 0 40px
+
+  .gallery
+    padding: 40px 0 80px
+    &__cards
+      margin: 40px 0 20px
+      grid-template-columns: repeat(2, 220px)
+      grid-template-rows: repeat(2, 220px)
+
+  .bottom
+    padding: 80px 0 60px
+    &__form
+      &-wrapper
+        margin: 0 auto 70px
+      &-title
+        font-size: 46px
+        margin: 0 0 40px
+
+  .modal
+    &__about
+      &-wrapper
+        &.active
+          opacity: 1
+          transform: translate(0, 0)
+
+@media(max-width: 480px)
+  h1
+    font-size: 32px
+
+  h2
+    font-size: 32px
+
+  h3
+    font-size: 32px
+
+  .btn-transparent
+    padding: 23px 18px
+
+  .header
+    padding: 25px 20px 0
+    &__logo
+      margin: 0
+      &-big
+        display: none
+      &-mini
+        display: block
+
+  .face
+    padding: 35px 0 25px
+    &__info
+      &-text
+        font-size: 22px
+        margin: 0
+      &-btn
+        width: 100%
+
+  .catalog
+    padding: 25px 0
+    &__card
+      &:first-child
+        background-position: center 5%
+      &-span
+        font-size: 16px
+
+  .about
+    padding: 25px 0
+    &__btn
+      width: 100%
+
+  .testimonials
+    padding: 25px 0 30px
+
+  .gallery
+    padding: 30px 0 60px
+    &__cards
+      grid-template-columns: repeat(2, 140px)
+      grid-template-rows: repeat(2, 140px)
+    &__btn
+      padding: 21px 10px
+
+  .bottom
+    padding: 55px 0 60px
+    &__form
+      &-title
+        font-size: 32px
+      &-wrapper
+        margin: 0 auto 60px
